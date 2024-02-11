@@ -39,7 +39,7 @@ const listController = {
                             author: author,
                             chapterText: chapterText,
                             labelList: labelList,
-                            href: 'http://localhost:7102/v1' + titleHref.split('https://truyenfull.vn')[1]
+                            href: 'https://truyen-full-api.onrender.com/v1' + titleHref.split('https://truyenfull.vn')[1]
                         });
                     }
                 });
@@ -90,7 +90,7 @@ const listController = {
                     return {
                         number: chapterNumber,
                         title: chapterTitle,
-                        url: 'http://localhost:7102/v1' + chapterUrl.split('https://truyenfull.vn')[1]
+                        url: 'https://truyen-full-api.onrender.com/v1' + chapterUrl.split('https://truyenfull.vn')[1]
                     };
                 });
 

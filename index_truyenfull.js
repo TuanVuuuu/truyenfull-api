@@ -19,10 +19,10 @@ const urlBase = 'https://truyenfull.vn/'
 
 
 //ROUTES
-app.use("/v1", novelRouter)
+app.use("https://truyen-full-api.onrender.com/v1", novelRouter)
 
 
-app.get('/v1/:novel/page-:page', async (req, res) => {
+app.get('https://truyen-full-api.onrender.com/v1/:novel/page-:page', async (req, res) => {
     try {
         const browser = await puppeteer.launch({ headless: true }); // Mở trình duyệt ở chế độ ẩn
         const page = await browser.newPage();
@@ -53,7 +53,7 @@ app.get('/v1/:novel/page-:page', async (req, res) => {
 });
 
 
-app.get('/v1/:novel/chuong-:chapter', async (req, res) => {
+app.get('https://truyen-full-api.onrender.com/v1/:novel/chuong-:chapter', async (req, res) => {
     try {
         const browser = await puppeteer.launch({ headless: true }); // Mở trình duyệt ở chế độ ẩn
         const page = await browser.newPage();
