@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index_truyenfull.js"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
