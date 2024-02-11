@@ -13,7 +13,6 @@ app.use(cors());
 app.use(morgan("common"));
 dotenv.config();
 
-const url = 'https://truyenfull.vn/danh-sach/truyen-moi/';
 const urlBase = 'https://truyenfull.vn/'
 
 
@@ -48,7 +47,7 @@ app.get('/v1/:novel/page-:page', async (req, res) => {
         res.status(200).json(novelInfo);
     } catch (error) {
         console.error(error);
-        res.status(500).json({ error: "Internal Server Error" });
+        res.status(500).json({ error: error.name });
     }
 });
 
