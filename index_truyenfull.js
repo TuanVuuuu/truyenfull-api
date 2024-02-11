@@ -87,5 +87,5 @@ app.get('/v1/:novel/chuong-:chapter', async (req, res) => {
 
 
 app.listen(process.env.PORT || 8000, () => {
-    console.log('Server is running...');
+    console.log('Server is running in' + process.env.PORT);
 });
