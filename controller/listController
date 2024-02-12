@@ -5,7 +5,11 @@ const listController = {
         try {
             const url = 'https://truyenfull.vn/danh-sach/truyen-moi/';
             const urlBase = 'https://truyenfull.vn/'
-            const browser = await puppeteer.launch({ headless: true }); // Mở trình duyệt ở chế độ ẩn
+            const browser = await puppeteer.launch({
+                headless: true,
+                executablePath: process.env.CHROME_BIN || null, // Sử dụng biến môi trường để xác định đường dẫn trình duyệt Chrome
+                args: ['--no-sandbox', '--disable-setuid-sandbox'] // Thêm các cờ args cần thiết để chạy trên Render
+            });
             const page = await browser.newPage();
             await page.goto(url);
 
